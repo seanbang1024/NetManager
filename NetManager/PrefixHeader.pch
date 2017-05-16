@@ -1,0 +1,105 @@
+//
+//  PrefixHeader.pch
+//  NetManager
+//
+//  Created by 郭榜 on 2017/5/16.
+//  Copyright © 2017年 com.Madman_bg.init. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import "UIButton+WebCache.h"
+#import "UIImageView+WebCache.h"
+#import "UIColor+Extend.h"
+#import "UIFont+Adapt.h"
+#import "UIView+Extension.h"
+#import "UIView+PPCategory.h"
+#import "NSString+Hash.h"
+#import "NSString+Extend.h"
+#import "AFNetworking.h"
+//#import "MJRefresh.h"
+#import "SVProgressHUD.h"
+//#import "FMDBManager.h"
+#import "NSDate+Convenience.h"
+#import "NSDate+Format.h"
+#import "UIImage+Extend.h"
+#import "MBProgressHUD.h"
+#import "GTMBase64.h"
+//自定义
+#import "HttpConfig.h"
+#import "HttpModel.h"
+
+
+
+
+#endif
+
+
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+
+//适配
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+#define IPHONE6Plus CGSizeEqualToSize(CGSizeMake(414, 736), [UIScreen mainScreen].bounds.size)
+//适配ios7
+#define IOS7_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+//适配ios8
+#define IOS8_OR_LATER   ( [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending )
+
+
+
+#define scaleW    screenWidth/320.0
+
+#define scaleH    screenHeight/568.0
+
+#define scaleW6To5    320.0 / 375.0 * scaleW
+
+#define scaleH6To5    568.0 / 667.0 * scaleH
+
+
+#define screenFrame ([[UIScreen mainScreen] bounds])
+#define screenHeight ([[UIScreen mainScreen] bounds].size.height)
+#define screenWidth ([[UIScreen mainScreen] bounds].size.width)
+//#define navigationHeight self.navigationController.navigationBar.bounds.size.height
+
+#define navigationHeight 44.0
+#define tabBarHeight ( self.navigationController.toolbar.bounds.size.height)
+
+#define statusBarHeightCustom  ([[UIApplication sharedApplication] statusBarFrame].size.height)
+//取得指定名称的图片
+#define IMG(name) [UIImage imageNamed:name]
+
+//快速格式化一个字符串
+#define _S(str,...) [NSString stringWithFormat:str,##__VA_ARGS__]
+#define _ST(str,...) [NSString stringWithFormat:@"%ld",(long)str,##__VA_ARGS__]
+
+
+
+#define kOpenLoginStateNotification @"Notification_OpenLoginState"   //开启登录状态（登录成功后的通知 ：数据库打开，websocket打开等，定位打开）
+#define kCloseLoginStateNotification @"Notification_CloseLoginState"   //关闭登录状态（注销成功后的通知 ：数据库关闭，websocket关闭等，定位关闭）
+#define kUserLoginNotification   @"Notification_UserLogin"   //用户登录（注册），后通知页面切换， 用户信息修改后通知页面刷新
+#define kUserLogoutNotification  @"Notification_UserLogout"  //用户注销后，通知页面切换
+
+
+#define kUpdateUserInfoNotification  @"Notification_UpdateUserInfo"  //更新用户信息
+
+#if DEBUG
+
+#define NSLog(FORMAT, ...) fprintf(stderr,"[%s:%d行] %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define NSLog(FORMAT, ...) nil
+
+#endif
+
+
+
+#endif /* PrefixHeader_pch */
