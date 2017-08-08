@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71971781EF7B3080082AC18 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71971761EF7B3080082AC18 /* IndexViewController.m */; };
+		A71971791EF7B3080082AC18 /* IndexViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71971771EF7B3080082AC18 /* IndexViewController.xib */; };
 		A73B441C1EC98D8B0029A567 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A73B441B1EC98D8B0029A567 /* main.m */; };
 		A73B441F1EC98D8B0029A567 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A73B441E1EC98D8B0029A567 /* AppDelegate.m */; };
 		A73B44221EC98D8B0029A567 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A73B44211EC98D8B0029A567 /* ViewController.m */; };
@@ -126,6 +128,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A71971751EF7B3080082AC18 /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		A71971761EF7B3080082AC18 /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		A71971771EF7B3080082AC18 /* IndexViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexViewController.xib; sourceTree = "<group>"; };
 		A73B44171EC98D8B0029A567 /* NetManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A73B441B1EC98D8B0029A567 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A73B441D1EC98D8B0029A567 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -383,6 +388,9 @@
 				A73B441E1EC98D8B0029A567 /* AppDelegate.m */,
 				A73B44201EC98D8B0029A567 /* ViewController.h */,
 				A73B44211EC98D8B0029A567 /* ViewController.m */,
+				A71971751EF7B3080082AC18 /* IndexViewController.h */,
+				A71971761EF7B3080082AC18 /* IndexViewController.m */,
+				A71971771EF7B3080082AC18 /* IndexViewController.xib */,
 				A73B45761ECAE3A60029A567 /* HttpReqFunc */,
 				A73B44BA1ECAA7B20029A567 /* HelpTools */,
 				A73B444D1EC98F130029A567 /* HttpNetManagers */,
@@ -907,6 +915,7 @@
 				A73B44271EC98D8B0029A567 /* Assets.xcassets in Resources */,
 				A73B44251EC98D8B0029A567 /* Main.storyboard in Resources */,
 				A73B44AF1ECAA73E0029A567 /* MJPhotoBrowser.bundle in Resources */,
+				A71971791EF7B3080082AC18 /* IndexViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,6 +969,7 @@
 				A73B44A81ECAA73E0029A567 /* CHANGELOG.md in Sources */,
 				A73B44A51ECAA73E0029A567 /* FMDatabasePool.m in Sources */,
 				A73B45291ECAAAEE0029A567 /* ZCAudioTool.m in Sources */,
+				A71971781EF7B3080082AC18 /* IndexViewController.m in Sources */,
 				A73B445F1EC98F130029A567 /* AFSecurityPolicy.m in Sources */,
 				A73B45551ECAABA30029A567 /* NSMutableArray+PPCategory.m in Sources */,
 				A73B44D61ECAA7B20029A567 /* NSString+Hash.m in Sources */,
@@ -1259,6 +1269,7 @@
 				A73B44461EC98D8C0029A567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73B44471EC98D8C0029A567 /* Build configuration list for PBXNativeTarget "NetManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -1267,6 +1278,7 @@
 				A73B44491EC98D8C0029A567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A73B444A1EC98D8C0029A567 /* Build configuration list for PBXNativeTarget "NetManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -1275,6 +1287,7 @@
 				A73B444C1EC98D8C0029A567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "GetHistoryReq.h"
-
+#import "IndexViewController.h"
 @interface ViewController ()
 
 @end
@@ -34,6 +34,12 @@
         
     }];
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    [btn addTarget:self action:@selector(btnAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    btn.backgroundColor = [UIColor redColor];
+    
     
 //    http://api.juheapi.com/japi/toh?key=您申请的KEY&v=1.0&month=11&day=1
 //    http://api.juheapi.com/japi/toh/?day=13&key=7528a751b7a7e3772a9845114b0d9e51&month=4&v=1.0
@@ -41,6 +47,13 @@
 
 }
 
+-(void)btnAction {
+    IndexViewController *index = [[IndexViewController alloc] init];
+    index.name = @"helloworld";
+    index.password = @"123";
+    
+    [self.navigationController pushViewController:index animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
